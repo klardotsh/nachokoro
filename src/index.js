@@ -62,12 +62,6 @@ export function createPlayer(name = 'Unnamed Player') {
 	};
 }
 
-export const defaultGameState = {
-	bank: Infinity,
-	players: [],
-	market: [],
-};
-
 export default function app() {
 }
 
