@@ -1,0 +1,36 @@
+{
+  "name": "nachokoro",
+  "version": "1.0.0",
+  "description": "Online MP clone of Machi Koro board game",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iv597/nachokoro.git"
+  },
+  "keywords": [
+    "machi",
+    "koro"
+  ],
+  "author": "Josh Klar <j@iv597.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iv597/nachokoro/issues"
+  },
+  "homepage": "https://github.com/iv597/nachokoro#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "node-uuid": "^1.4.7"
+  }
+}

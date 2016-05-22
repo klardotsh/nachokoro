@@ -1,0 +1,12 @@
+{
+	"extends": "airbnb-base",
+	"parser": "babel-eslint",
+	"settings": {
+		"import/resolver": "node"
+	},
+	"rules": {
+		"indent": [ 1, "tab" ],
+		"no-underscore-dangle": [ 0 ]
+	}
+}
+
