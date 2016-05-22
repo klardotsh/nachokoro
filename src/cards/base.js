@@ -1,5 +1,56 @@
 import { ACTIONS, CARD_PRIORITIES, ESTABLISHMENT_TYPES, SOURCES } from '../consts';
 
+export function radioTowerEffect(player) {
+	return {
+		player: {
+			...player,
+			rollsAllowedPerTurn: 2,
+		},
+	};
+}
+
+export function amusementParkEffect(player) {
+	const extraTurnWhen = player.extraTurnWhen ?
+		[...player.extraTurnWhen, 'doubles'] :
+		['doubles'];
+
+	return {
+		player: {
+			...player,
+			extraTurnWhen,
+		},
+	};
+}
+
+export function shoppingMallEffect(player) {
+	const addedBonuses = {
+		[ESTABLISHMENT_TYPES.COFFEE]: 1,
+		[ESTABLISHMENT_TYPES.GOODS]: 1,
+	};
+
+	if (player.bonuses) {
+		Object.keys(player.bonuses).forEach((k) => {
+			addedBonuses[k] = player.bonuses[k] + (addedBonuses[k] || 0);
+		});
+	}
+
+	return {
+		player: {
+			...player,
+			bonuses: addedBonuses,
+		},
+	};
+}
+
+export function trainStationEffect(player) {
+	return {
+		player: {
+			...player,
+			diceAvailable: 2,
+		},
+	};
+}
+
 export const ESTABLISHMENTS = [
 	{
 		title: 'Wheat Field',
@@ -266,67 +317,24 @@ export const LANDMARKS = [
 		title: 'Train Station',
 		subtitle: 'You may roll 1 or 2 dice.',
 		cost: 4,
-		effect(player) {
-			return {
-				player: {
-					...player,
-					diceAvailable: 2,
-				},
-			};
-		},
+		effect: 'trainStationEffect',
 	},
 	{
 		title: 'Shopping Mall',
 		subtitle: 'Each of your COFFEE and GOODS establishments earn +1 coin.',
 		cost: 10,
-		effect(player) {
-			const addedBonuses = {
-				[ESTABLISHMENT_TYPES.COFFEE]: 1,
-				[ESTABLISHMENT_TYPES.GOODS]: 1,
-			};
-
-			if (player.bonuses) {
-				Object.keys(player.bonuses).forEach((k) => {
-					addedBonuses[k] = player.bonuses[k] + (addedBonuses[k] || 0);
-				});
-			}
-
-			return {
-				player: {
-					...player,
-					bonuses: addedBonuses,
-				},
-			};
-		},
+		effect: 'shoppingMallEffect',
 	},
 	{
 		title: 'Amusement Park',
 		subtitle: 'If you roll doubles, take another turn after this one.',
 		cost: 16,
-		effect(player) {
-			const extraTurnWhen = player.extraTurnWhen ?
-				[...player.extraTurnWhen, 'doubles'] :
-				['doubles'];
-
-			return {
-				player: {
-					...player,
-					extraTurnWhen,
-				},
-			};
-		},
+		effect: 'amusementParkEffect',
 	},
 	{
 		title: 'Radio Tower',
 		subtitle: 'Once every turn, you can choose to re-roll your dice.',
 		cost: 22,
-		effect(player) {
-			return {
-				player: {
-					...player,
-					rollsAllowedPerTurn: 2,
-				},
-			};
-		},
+		effect: 'radioTowerEffect',
 	},
 ];
