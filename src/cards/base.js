@@ -59,7 +59,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 1,
 		active: [1],
-		spawn: true,
+		spawn: 1,
 		priority: CARD_PRIORITIES.BLUE,
 		actions: [
 			{
@@ -76,7 +76,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 1,
 		active: [2],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.BLUE,
 		actions: [
 			{
@@ -93,7 +93,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 1,
 		active: [2, 3],
-		spawn: true,
+		spawn: 1,
 		priority: CARD_PRIORITIES.GREEN,
 		actions: [
 			{
@@ -110,7 +110,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 2,
 		active: [3],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.RED,
 		actions: [
 			{
@@ -127,7 +127,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 2,
 		active: [4],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.GREEN,
 		actions: [
 			{
@@ -144,7 +144,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 3,
 		active: [5],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.BLUE,
 		actions: [
 			{
@@ -161,7 +161,7 @@ export const ESTABLISHMENTS = [
 		count: 4,
 		cost: 8,
 		active: [6],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.PURPLE,
 		actions: [
 			{
@@ -178,7 +178,7 @@ export const ESTABLISHMENTS = [
 		count: 4,
 		cost: 6,
 		active: [6],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.PURPLE,
 		actions: [
 			{
@@ -195,7 +195,7 @@ export const ESTABLISHMENTS = [
 		count: 4,
 		cost: 7,
 		active: [6],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.PURPLE,
 		actions: [
 			{
@@ -212,7 +212,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 5,
 		active: [7],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.GREEN,
 		actions: [
 			{
@@ -230,7 +230,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 3,
 		active: [8],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.GREEN,
 		actions: [
 			{
@@ -248,7 +248,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 6,
 		active: [9],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.BLUE,
 		actions: [
 			{
@@ -265,7 +265,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 3,
 		active: [9, 10],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.RED,
 		actions: [
 			{
@@ -282,7 +282,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 3,
 		active: [10],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.BLUE,
 		actions: [
 			{
@@ -299,7 +299,7 @@ export const ESTABLISHMENTS = [
 		count: 6,
 		cost: 2,
 		active: [11, 12],
-		spawn: false,
+		spawn: 0,
 		priority: CARD_PRIORITIES.GREEN,
 		actions: [
 			{
