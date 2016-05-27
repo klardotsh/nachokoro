@@ -22,13 +22,13 @@ export function createGame(name = 'Unnamed Game') {
 	const establishments = [];
 
 	ESTABLISHMENTS.forEach((es) => {
-		Array.apply(null, Array(es.count)).forEach(() => {
+		for (let i = 0; i < es.count; i++) {
 			establishments.push({
 				...es,
 				id: generateId(),
 				count: undefined,
 			});
-		});
+		}
 	});
 
 	return {
