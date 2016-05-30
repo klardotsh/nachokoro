@@ -51,7 +51,7 @@ export function trainStationEffect(player) {
 	};
 }
 
-export const ESTABLISHMENTS = [
+export const establishments = [
 	{
 		title: 'Wheat Field',
 		subtitle: "Get 1 coin from the bank, on anyone's turn.",
@@ -312,7 +312,7 @@ export const ESTABLISHMENTS = [
 	},
 ];
 
-export const LANDMARKS = [
+export const landmarks = [
 	{
 		title: 'Train Station',
 		subtitle: 'You may roll 1 or 2 dice.',

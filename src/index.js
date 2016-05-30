@@ -1,6 +1,9 @@
+import assert from 'assert';
 import uuid from 'node-uuid';
 
-import { ESTABLISHMENTS, LANDMARKS } from './cards/base';
+import * as baseGame from './cards/base';
+
+assert(baseGame.landmarks && baseGame.establishments);
 
 const generateId = uuid.v4;
 
@@ -21,7 +24,11 @@ export function addPlayerToGame(game, player) {
 export function createGame(name = 'Unnamed Game') {
 	const establishments = [];
 
-	ESTABLISHMENTS.forEach((es) => {
+	// this is absolutely incapable of handling the
+	// market scheme introduced in the harbor exp.
+	//
+	// oh 🐳
+	baseGame.establishments.forEach((es) => {
 		for (let i = 0; i < es.count; i++) {
 			establishments.push({
 				...es,
@@ -49,13 +56,15 @@ export function createPlayer(name = 'Unnamed Player') {
 		extraTurnWhen: [],
 		rollsAllowedPerTurn: 1,
 
-		establishments: ESTABLISHMENTS
+		establishments: baseGame.establishments
 			.filter((es) => es.spawn)
-			.map((es) => Object.assign({}, es, {
+			.map((es) => ({
+				...es,
 				id: generateId(),
 			})),
 
-		landmarks: LANDMARKS.map((lm) => Object.assign({}, lm, {
+		landmarks: baseGame.landmarks.map((lm) => ({
+			...lm,
 			id: generateId(),
 			purchased: false,
 		})),
