@@ -318,23 +318,27 @@ export const landmarks = [
 		subtitle: 'You may roll 1 or 2 dice.',
 		cost: 4,
 		effect: 'trainStationEffect',
+		built: false,
 	},
 	{
 		title: 'Shopping Mall',
 		subtitle: 'Each of your COFFEE and GOODS establishments earn +1 coin.',
 		cost: 10,
 		effect: 'shoppingMallEffect',
+		built: false,
 	},
 	{
 		title: 'Amusement Park',
 		subtitle: 'If you roll doubles, take another turn after this one.',
 		cost: 16,
 		effect: 'amusementParkEffect',
+		built: false,
 	},
 	{
 		title: 'Radio Tower',
 		subtitle: 'Once every turn, you can choose to re-roll your dice.',
 		cost: 22,
 		effect: 'radioTowerEffect',
+		built: false,
 	},
 ];
